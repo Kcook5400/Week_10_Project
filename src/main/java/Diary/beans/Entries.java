@@ -14,7 +14,7 @@ import lombok.Data;
  *CIS175 - Fall 2021 
  * Nov 1, 2021
  */
-
+@Data
 @Entity
 public class Entries {
 	@Id
