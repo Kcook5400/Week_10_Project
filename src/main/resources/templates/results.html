@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>View All Entries</title>
+</head>
+<body>
+<form>
+<table>
+<tr th:each="currentEntrie : ${entries}">
+<td th:text="${currentEntrie.text}" />
+<td th:text="$currentEntrie.date}"/>
+
+
+</tr>
+</table>
+</form>
+<a href = "../inputEntrie"> Add a new entry</a>
+</body>
+</html>

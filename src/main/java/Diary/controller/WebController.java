@@ -20,7 +20,7 @@ public class WebController {
 	@Autowired
 	DiaryRepository repo;
 
-	@GetMapping("/index.html")
+	@GetMapping("/viewall")
 	
 	public String viewAllEntries(Model model) {
 		model.addAttribute("entries", repo.findAll());
