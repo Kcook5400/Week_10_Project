@@ -1,0 +1,17 @@
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+
+<meta charset="UTF-8">
+<title> Insert New Entry</title>
+</head>
+<body>
+<form th:object="${newEntries}" th:action="@{/inputEntry}" method = 'POST'>
+
+Text: <input name="text" size = "20"> <br>
+Date: <input name="date" size= "20"> <br>
+</form>
+
+<a href="viewAll"> View all Entries</a>
+</body>
+
+</html>

@@ -20,16 +20,16 @@ public class WebController {
 	@Autowired
 	DiaryRepository repo;
 
-	@GetMapping("/viewall")
+	@GetMapping("/viewAll")
 	
 	public String viewAllEntries(Model model) {
-		model.addAttribute("entries", repo.findAll());
+		model.addAttribute("Entries", repo.findAll());
 		return "results";
 	}
-	@GetMapping("/inputEntry")
+	@GetMapping("/createEntry")
 	public String addNewEntrie(Model model) {
 		Entries c = new Entries();
-		model.addAttribute("newContact", c);
+		model.addAttribute("newEntries", c);
 		return "input";
 	}
 
@@ -37,7 +37,7 @@ public class WebController {
 	public String showUpdateContact(@PathVariable("id") long id, Model model) {
 		Entries  c = repo.findById(id).orElse(null);
 		System.out.println("ITEM TO EDIT: " + c.toString());
-		model.addAttribute("newEntire", c);
+		model.addAttribute("newEntries", c);
 		return "input";
 	}
 
